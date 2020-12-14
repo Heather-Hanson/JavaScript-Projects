@@ -20,4 +20,7 @@ document.getElementById("Math3") .innerHTML = "The result above incremented by 1
 var z = y % 3; 
 document.getElementById("Math4") .innerHTML = "And if we take THAT result and divide it by 3, the remainder will be: " + z;
 
+//Decrement the previous result by 1
+var zz = --z;
+document.getElementById("Math5") .innerHTML = "If I decrement the remainder we get:  " + zz;
 }
