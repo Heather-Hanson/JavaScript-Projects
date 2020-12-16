@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+<script>
+$(document).ready(function(){
+    $("html").append(  //appends all content within the 'html' tag with content below
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+            </div>\
+          </body>"
+    );
+    $("#2").css({"color" : "red"}); //changes color of second paragraph to red
+    $("#3").click(function(){ // hides header when clicked
+        $('h1').hide();
+    });
+    $( "#1" ).click(function( event ) {
+  alert( event.type ); // an alert will advise the type of event that occured on element id #1
+});
+$("#2").hide("slow"); // element id #1 will be hidden
+
+});
+</script>
+</html>
