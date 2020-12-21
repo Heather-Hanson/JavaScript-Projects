@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Heather Hanson</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet/portfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="https://kit.fontawesome.com/d823956502.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="background">
+
+    <!--NAVBAR-->
+    <div class="navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+		<a onclick="openForm()" ondblclick="closeForm()">Contact</a> 
+    </div>
+    <!--END NAVBAR-->
+
+
+
+    <!--HOME-->
+
+    <br>
+    <br>
+    <!--looping background video-->
+    <div id="Home">
+        <video autoplay loop muted id="Video">
+            <source src="Video/DarkTyping.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <!--video text overlay-->
+        <div class="video_text">
+            <h1 class="main-heading">Heather Hanson</h1>
+            <p>
+                <center>
+                    Welcome to my portfolio website.
+                    On it, I will tell you about my background and experience.<br>
+                    <br>Thank you for stopping by and enjoy!
+                </center>
+            </p>
+        </div>
+    </div>
+    <!--END HOME-->
+    <!--SLIDESHOW-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+          <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/picture.jpg" width="100%">
+                    <div class="text">I am available to assist you with your project!</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" width="100%">
+                    <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/C_Sharp_and_Dot_NET.png" width="100%">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/SQL_and_Database.jpg" width="100%">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/salesforce.png" width="100%">
+                    <div class="text">I am also an experienced Salesforce Admin.</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                    <img class="Slide_Show_Images" src="Images/Contact_Typewriter.jpg" width="100%">
+                    <div class="text">
+                        <a onclick="openForm()" href="#Contact" style="color: white;">Contact me now!</a>
+                    </div>
+                </div>
+                <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+
+            </div>
+        </div>
+    </div>
+    <!--END SLIDESHOW-->
+    <!--ABOUT-->
+    <div class="row" id="About">
+        <div class="column_2">
+            <img src="Images/CoffeeLaptop.jpg" alt="Laptop">
+        </div>
+        <div class="column_1">
+            <p>I am a runner, a musician, and a software/web developer. I love learning new technology and new things
+                about the technology I already know.
+                <br><br>
+
+                I am a graduate of <a href="https://www.academyoflearning.com/" target="_blank">Academy of Learning
+                    Career College</a> Software and Web Developement Diploma program with experience in a variety of
+                programing languages. I also have 5+ years experience as a <a href="https://trailblazer.me/id/hhanson"
+                    target="_blank">Salesforce Admin & Developer</a>.
+
+            </p>
+        </div>
+    </div>
+    <!--END ABOUT-->
+
+    <!--GITHUB-->
+    <div class="row" id="GitHub">
+        <div class="column_1">
+            <h1>GitHub</h1>
+            <p>You can view my coding projects on my GitHub profile here:<br>
+                <center><a href="https://github.com/heather-hanson" target="_blank">Heather Hanson GitHub</a></center>
+            </p>
+        </div>
+        <div class="column_4">
+            <a href="https://github.com/heather-hanson" target="_blank"><img src="Images/GitHub.png" alt="GitHub"></a>
+        </div>
+    </div>
+    <!--END GITHUB-->
+
+    <!--CONTACT-->
+    <div id="Contact">
+        <button onclick="openForm()" class="pop_up_button">CONTACT</button>
+        <div class="form_popup" id="myForm">
+            <form action="https://formspree.io/f/xzbkkzap" method="POST" class="form-container">
+                <h1>CONTACT</h1>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Please enter your name here" name="name" required>
+                <label for="phone">Phone:</label>
+                <input type="text" placeholder="Please enter your phone number here" name="phone">
+                <label for="email">Email:</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here" name="email"
+                    required>
+                <label for="message">Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please write your message here"
+                    name="message">
+                <button type="submit" class="btn submit">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CANCEL</button>
+            </form>
+        </div>
+    </div>
+    <!--END CONTACT-->
+
+    <!--FOOTER-->
+    <footer>
+        <center>
+        <q>Not all of us can do great things. But we can do small things with great love.</q> – Mother Teresa
+            <br><br>
+        Connect with me!<br><br>
+        <a class="social" href="https://www.linkedin.com/in/heather-hanson-4b950166/" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>&nbsp;&nbsp;
+        <a class="social" href="https://github.com/Heather-Hanson" target="_blank"><i class="fab fa-github fa-2x"></i></a>&nbsp;&nbsp;
+        <a class="social" href="https://trailblazer.me/id/hhanson" target="_blank"><i class="fab fa-salesforce fa-2x"></i></a>
+    </center>
+        <!--END FOOTER-->
+        <script src="JavaScript/portfolio.js"></script>
+        
+</body>
+
+</html>
